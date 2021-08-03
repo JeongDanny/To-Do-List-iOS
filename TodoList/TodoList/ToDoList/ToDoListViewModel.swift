@@ -38,6 +38,10 @@ struct ToDoListViewModel {
     func toggleToDoIsDone(id: String) {
         toDoDB.toggleToDoIsDone(id: id)
     }
+    
+    func syncDB() {
+        toDoDB.sync()
+    }
 }
 
 struct SectionOfToDoList {

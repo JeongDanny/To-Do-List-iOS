@@ -21,6 +21,16 @@
 		F887ACA626B7EFDA00E6CFEB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F887ACA426B7EFDA00E6CFEB /* MainViewController.swift */; };
 		F887ACAA26B7EFE800E6CFEB /* ToDoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F887ACA826B7EFE800E6CFEB /* ToDoListViewController.xib */; };
 		F887ACAB26B7EFE800E6CFEB /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F887ACA926B7EFE800E6CFEB /* ToDoListViewController.swift */; };
+		F8D77E7226B929C4000EF72D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E7026B929C4000EF72D /* ProfileViewController.swift */; };
+		F8D77E7326B929C4000EF72D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8D77E7126B929C4000EF72D /* ProfileViewController.xib */; };
+		F8D77E7726B92E7F000EF72D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E7526B92E7F000EF72D /* SignUpViewController.swift */; };
+		F8D77E7826B92E7F000EF72D /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8D77E7626B92E7F000EF72D /* SignUpViewController.xib */; };
+		F8D77E7D26B93266000EF72D /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E7C26B93266000EF72D /* PreferenceManager.swift */; };
+		F8D77E7F26B9347B000EF72D /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E7E26B9347B000EF72D /* UILabelExtension.swift */; };
+		F8D77E8126B93E6F000EF72D /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E8026B93E6F000EF72D /* SignUpViewModel.swift */; };
+		F8D77E8426B941F2000EF72D /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E8326B941F2000EF72D /* UIButtonExtension.swift */; };
+		F8D77E8726B943C0000EF72D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E8626B943C0000EF72D /* User.swift */; };
+		F8D77E8926B9454C000EF72D /* GlobalDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E8826B9454C000EF72D /* GlobalDataBase.swift */; };
 		F8F3A55C26B915FB0092D913 /* GenerateToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F3A55A26B915FB0092D913 /* GenerateToDoCell.swift */; };
 		F8F3A55D26B915FB0092D913 /* GenerateToDoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8F3A55B26B915FB0092D913 /* GenerateToDoCell.xib */; };
 		F8F3A56026B917D70092D913 /* ToDoEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F3A55E26B917D70092D913 /* ToDoEmptyCell.swift */; };
@@ -47,6 +57,16 @@
 		F887ACA426B7EFDA00E6CFEB /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F887ACA826B7EFE800E6CFEB /* ToDoListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToDoListViewController.xib; sourceTree = "<group>"; };
 		F887ACA926B7EFE800E6CFEB /* ToDoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
+		F8D77E7026B929C4000EF72D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F8D77E7126B929C4000EF72D /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		F8D77E7526B92E7F000EF72D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F8D77E7626B92E7F000EF72D /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		F8D77E7C26B93266000EF72D /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
+		F8D77E7E26B9347B000EF72D /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		F8D77E8026B93E6F000EF72D /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		F8D77E8326B941F2000EF72D /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		F8D77E8626B943C0000EF72D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F8D77E8826B9454C000EF72D /* GlobalDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalDataBase.swift; sourceTree = "<group>"; };
 		F8F3A55A26B915FB0092D913 /* GenerateToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateToDoCell.swift; sourceTree = "<group>"; };
 		F8F3A55B26B915FB0092D913 /* GenerateToDoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenerateToDoCell.xib; sourceTree = "<group>"; };
 		F8F3A55E26B917D70092D913 /* ToDoEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoEmptyCell.swift; sourceTree = "<group>"; };
@@ -128,7 +148,11 @@
 			isa = PBXGroup;
 			children = (
 				F887ACA226B7EFDA00E6CFEB /* Main */,
+				F8D77E7426B92E5C000EF72D /* SignUp */,
 				F887ACA726B7EFE800E6CFEB /* ToDoList */,
+				F8D77E6F26B929B6000EF72D /* Profile */,
+				F8D77E7926B931D4000EF72D /* Util */,
+				F8D77E8226B93F19000EF72D /* Extensions */,
 				F887AC8E26B7EF7C00E6CFEB /* AppDelegate.swift */,
 				F887AC9726B7EF7C00E6CFEB /* Assets.xcassets */,
 				F887AC9926B7EF7C00E6CFEB /* LaunchScreen.storyboard */,
@@ -157,6 +181,52 @@
 				F887ACA826B7EFE800E6CFEB /* ToDoListViewController.xib */,
 			);
 			path = ToDoList;
+			sourceTree = "<group>";
+		};
+		F8D77E6F26B929B6000EF72D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F8D77E7026B929C4000EF72D /* ProfileViewController.swift */,
+				F8D77E7126B929C4000EF72D /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F8D77E7426B92E5C000EF72D /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				F8D77E8526B943B9000EF72D /* Models */,
+				F8D77E8026B93E6F000EF72D /* SignUpViewModel.swift */,
+				F8D77E7526B92E7F000EF72D /* SignUpViewController.swift */,
+				F8D77E7626B92E7F000EF72D /* SignUpViewController.xib */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		F8D77E7926B931D4000EF72D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F8D77E7C26B93266000EF72D /* PreferenceManager.swift */,
+				F8D77E8826B9454C000EF72D /* GlobalDataBase.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		F8D77E8226B93F19000EF72D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F8D77E7E26B9347B000EF72D /* UILabelExtension.swift */,
+				F8D77E8326B941F2000EF72D /* UIButtonExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F8D77E8526B943B9000EF72D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F8D77E8626B943C0000EF72D /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,7 +290,9 @@
 			files = (
 				F887AC9B26B7EF7C00E6CFEB /* LaunchScreen.storyboard in Resources */,
 				F82BF28626B8D7B50055CA6D /* ToDoCell.xib in Resources */,
+				F8D77E7326B929C4000EF72D /* ProfileViewController.xib in Resources */,
 				F8F3A56126B917D70092D913 /* ToDoEmptyCell.xib in Resources */,
+				F8D77E7826B92E7F000EF72D /* SignUpViewController.xib in Resources */,
 				F887ACAA26B7EFE800E6CFEB /* ToDoListViewController.xib in Resources */,
 				F887AC9826B7EF7C00E6CFEB /* Assets.xcassets in Resources */,
 				F8F3A55D26B915FB0092D913 /* GenerateToDoCell.xib in Resources */,
@@ -277,16 +349,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8D77E7F26B9347B000EF72D /* UILabelExtension.swift in Sources */,
+				F8D77E8126B93E6F000EF72D /* SignUpViewModel.swift in Sources */,
 				F887ACAB26B7EFE800E6CFEB /* ToDoListViewController.swift in Sources */,
 				F82BF28F26B910940055CA6D /* ToDoData.swift in Sources */,
+				F8D77E8926B9454C000EF72D /* GlobalDataBase.swift in Sources */,
 				F887ACA626B7EFDA00E6CFEB /* MainViewController.swift in Sources */,
 				F8F3A56326B918BF0092D913 /* ToDoListCellData.swift in Sources */,
 				F887AC8F26B7EF7C00E6CFEB /* AppDelegate.swift in Sources */,
+				F8D77E8426B941F2000EF72D /* UIButtonExtension.swift in Sources */,
 				F8F3A55C26B915FB0092D913 /* GenerateToDoCell.swift in Sources */,
+				F8D77E7226B929C4000EF72D /* ProfileViewController.swift in Sources */,
 				F82BF28A26B8D92F0055CA6D /* ToDo.swift in Sources */,
 				F82BF28C26B8DD720055CA6D /* ToDoDatabase.swift in Sources */,
+				F8D77E7D26B93266000EF72D /* PreferenceManager.swift in Sources */,
 				F82BF28526B8D7B50055CA6D /* ToDoCell.swift in Sources */,
+				F8D77E8726B943C0000EF72D /* User.swift in Sources */,
 				F82BF28826B8D7CB0055CA6D /* ToDoListViewModel.swift in Sources */,
+				F8D77E7726B92E7F000EF72D /* SignUpViewController.swift in Sources */,
 				F8F3A56026B917D70092D913 /* ToDoEmptyCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

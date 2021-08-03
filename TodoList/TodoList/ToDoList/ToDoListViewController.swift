@@ -7,7 +7,7 @@
 
 import UIKit
 import RxDataSources
-import class RxSwift.DisposeBag
+import RxSwift
 
 protocol ToDoListCell {
     static var cellId: String { get }
@@ -18,7 +18,6 @@ protocol ToDoListCell {
 class ToDoListViewController: UIViewController {
     static func newInstance(viewModel: ToDoListViewModel) -> ToDoListViewController {
         let vc = ToDoListViewController(nibName: "ToDoListViewController", bundle: nil)
-        vc.tabBarItem = .init(title: "To Do", image: nil, tag: 0)
         vc.viewModel = viewModel
         return vc
     }
@@ -59,9 +58,19 @@ class ToDoListViewController: UIViewController {
         }
         self.dataSource = dataSource
         
-        viewModel.sections
-            .bind(to: tableView.rx.items(dataSource: dataSource))
-            .disposed(by: disposeBag)
+        disposeBag.insert(
+            viewModel.sections
+                .observe(on: MainScheduler.instance)
+                .bind(to: tableView.rx.items(dataSource: dataSource)),
+            gDB.observeUser()
+                .observe(on: MainScheduler.instance)
+                .map({ $0.id })
+                .startWith("")
+                .distinctUntilChanged()
+                .bind(onNext: { [weak self] _ in
+                    self?.viewModel.syncDB()
+                })
+        )
     }
     
     private func showGenerateToDoAlert() {

@@ -10,13 +10,13 @@ import RxSwift
 import RxCocoa
 import RealmSwift
 
-let userId = "122543"
 struct ToDoDatabase {
     private let toDoData = BehaviorRelay<ToDoData?>(value: nil)
     private let toDoList = BehaviorRelay<[String: ToDo]>(value: [:])
     private let realm = try! Realm()
     
-    init() {
+    func sync() {
+        guard let userId = udm.userId else { return }
         let toDoRealmList = realm.objects(ToDoRealm.self)
         let toDoList = Dictionary(uniqueKeysWithValues: toDoRealmList.map({ ($0.id, $0.convertToToDo() )}))
         self.toDoList.accept(toDoList)
@@ -25,6 +25,7 @@ struct ToDoDatabase {
     }
     
     func update(id: String, toDo: ToDo) {
+        guard let userId = udm.userId else { return }
         var toDoData = self.toDoData.value ?? ToDoData(userId: userId)
         if !toDoData.ids.contains(id) {
             toDoData.ids.append(id)
