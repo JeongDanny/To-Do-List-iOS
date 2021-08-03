@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ToDoListViewController" customModule="TodoList" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="cXm-aV-hXi" id="pg8-e3-GjJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,9 +19,21 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cXm-aV-hXi">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="45" y="95"/>
+            <constraints>
+                <constraint firstItem="cXm-aV-hXi" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="6OU-gw-5xC"/>
+                <constraint firstAttribute="bottom" secondItem="cXm-aV-hXi" secondAttribute="bottom" id="ACd-R1-avk"/>
+                <constraint firstItem="cXm-aV-hXi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="n3q-r4-BXE"/>
+                <constraint firstItem="cXm-aV-hXi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yJO-SZ-AmF"/>
+            </constraints>
+            <point key="canvasLocation" x="44.927536231884062" y="94.419642857142847"/>
         </view>
     </objects>
     <resources>

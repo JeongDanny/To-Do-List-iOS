@@ -13,7 +13,7 @@ class MainViewController: UITabBarController {
         return vc
     }
     
-    private let toDoListVC = ToDoListViewController.newInstance()
+    private let toDoListVC = ToDoListViewController.newInstance(viewModel: ToDoListViewModel(toDoDB: ToDoDatabase()))
     
     override func viewDidLoad() {
         super.viewDidLoad()
