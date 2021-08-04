@@ -35,6 +35,10 @@ struct ToDoListViewModel {
         toDoDB.update(id: id, toDo: ToDo(id: id, title: title, subTitle: subTitle, isDone: false))
     }
     
+    func editToDo(id: String, toDo: ToDo) {
+        toDoDB.update(id: id, toDo: toDo)
+    }
+    
     func toggleToDoIsDone(id: String) {
         toDoDB.toggleToDoIsDone(id: id)
     }

@@ -57,4 +57,8 @@ struct ToDoDatabase {
     func toDoListObservable(id: String) -> Observable<ToDo?> {
         toDoList.map({ $0[id] })
     }
+    
+    func toDo(id: String) -> ToDo? {
+        return toDoList.value[id]
+    }
 }

@@ -68,7 +68,16 @@ class ToDoListViewController: UIViewController {
                 .distinctUntilChanged()
                 .bind(onNext: { [weak self] _ in
                     self?.viewModel.syncDB()
-                })
+                }),
+            tableView.rx.itemSelected.bind(onNext: { [weak self] indexPath in
+                do {
+                    guard let cellData = try dataSource.model(at: indexPath) as? ToDoListCellData else { return }
+                    if case let .toDo(id) = cellData,
+                       let toDo = self?.viewModel.toDoDB.toDo(id: id) {
+                        self?.showEditToDoAlert(currentToDo: toDo)
+                    }
+                } catch {   }
+            })
         )
     }
     
@@ -84,6 +93,30 @@ class ToDoListViewController: UIViewController {
             let title = alert.textFields?[0].text ?? ""
             let subTitle = alert.textFields?[1].text
             self?.viewModel.generateToDo(title: title, subTitle: subTitle)
+        }
+        let cancelAction = UIAlertAction(title: "CANCEL", style: .cancel)
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func showEditToDoAlert(currentToDo: ToDo) {
+        let alert = UIAlertController(title: "", message: "Edit To Do", preferredStyle: .alert)
+        alert.addTextField { textField in
+            textField.placeholder = "title (required)"
+            textField.text = currentToDo.title
+        }
+        alert.addTextField { textField in
+            textField.placeholder = "subtitle"
+            textField.text = currentToDo.subTitle
+        }
+        let okAction = UIAlertAction(title: "OK", style: .default) { [weak self] okAction in
+            let title = alert.textFields?[0].text ?? ""
+            let subTitle = alert.textFields?[1].text
+            let newToDo = ToDo(id: currentToDo.id, title: title,
+                               subTitle: subTitle, isDone: currentToDo.isDone)
+            
+            self?.viewModel.editToDo(id: currentToDo.id, toDo: newToDo)
         }
         let cancelAction = UIAlertAction(title: "CANCEL", style: .cancel)
         alert.addAction(cancelAction)
