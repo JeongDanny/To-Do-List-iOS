@@ -1,5 +1,5 @@
 //
-//  PreferenceManager.swift
+//  UserDefaultsManager.swift
 //  TodoList
 //
 //  Created by paytalab on 2021/08/03.
@@ -24,5 +24,9 @@ struct UserDefaultsManager {
     
     enum UserDefaultsKeys: String {
         case userId
+    }
+    
+    mutating func reset() {
+        userId = nil
     }
 }

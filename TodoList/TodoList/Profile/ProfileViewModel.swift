@@ -36,7 +36,7 @@ struct ProfileViewModel {
     
     func deleteUser() {
         guard let userId = udm.userId else { return }
-        udm.userId = nil
+        udm.reset()
         userDB.deleteUser(userId: userId)
     }
 }

@@ -44,12 +44,6 @@ struct ToDoDatabase {
         }
     }
     
-    func toggleToDoIsDone(id: String) {
-        guard var toDo = toDoList.value[id] else { return }
-        toDo.isDone.toggle()
-        update(id: id, toDo: toDo)
-    }
-    
     func toDoListidsObservable() -> Observable<[String]> {
         toDoData.map({ $0?.ids ?? [] })
     }

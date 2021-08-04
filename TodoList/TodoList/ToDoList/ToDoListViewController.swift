@@ -23,6 +23,7 @@ class ToDoListViewController: UIViewController {
     }
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var generateButton: UIButton!
     private var viewModel: ToDoListViewModel!
     private let disposeBag = DisposeBag()
     private var dataSource: RxTableViewSectionedReloadDataSource<SectionOfToDoList>?
@@ -31,9 +32,14 @@ class ToDoListViewController: UIViewController {
         super.viewDidLoad()
         
         title = "To Do"
-        tableView.contentInset = .init(top: 24, left: 0, bottom: 24, right: 0)
+        tableView.contentInset = .zero
         tableView.separatorStyle = .none
         tableView.delegate = self
+        generateButton.backgroundColor = .white
+        generateButton.layer.borderColor = UIColor.lightGray.cgColor
+        generateButton.layer.borderWidth = 0.05
+        generateButton.layer.cornerRadius = generateButton.frame.height / 2
+        generateButton.clipsToBounds = true
         
         let dataSource = RxTableViewSectionedReloadDataSource<SectionOfToDoList> { [weak self] dataSource, tableView, indexPath, item in
             guard let s = self else { return UITableViewCell() }
@@ -78,7 +84,24 @@ class ToDoListViewController: UIViewController {
                         self?.showEditToDoAlert(currentToDo: toDo)
                     }
                 } catch {   }
-            })
+            }),
+            tableView.rx.didEndDecelerating
+                .startWith(())
+                .withLatestFrom(tableView.rx.contentOffset)
+                .map({ [weak self] contentOffset -> Bool in
+                    guard let s = self else { return false }
+                    let tableViewHeight = s.tableView.frame.height - (self?.navigationController?.navigationBar.frame.height ?? 0)
+                    let contentHeight = s.tableView.contentSize.height
+                    let generateCellHeight = GenerateToDoCell.cellHeight(cellData: .generateButton)
+                    let generateCellY = contentHeight - generateCellHeight
+                    return contentOffset.y + tableViewHeight > generateCellY
+                })
+                .observe(on: MainScheduler.instance)
+                .bind(to: generateButton.rx.isHidden),
+            generateButton.rx.tap
+                .bind(onNext: { [weak self] _ in
+                    self?.showGenerateToDoAlert()
+                })
         )
     }
     

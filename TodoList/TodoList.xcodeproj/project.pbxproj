@@ -25,7 +25,7 @@
 		F8D77E7326B929C4000EF72D /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8D77E7126B929C4000EF72D /* ProfileViewController.xib */; };
 		F8D77E7726B92E7F000EF72D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E7526B92E7F000EF72D /* SignUpViewController.swift */; };
 		F8D77E7826B92E7F000EF72D /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8D77E7626B92E7F000EF72D /* SignUpViewController.xib */; };
-		F8D77E7D26B93266000EF72D /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E7C26B93266000EF72D /* PreferenceManager.swift */; };
+		F8D77E7D26B93266000EF72D /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E7C26B93266000EF72D /* UserDefaultsManager.swift */; };
 		F8D77E7F26B9347B000EF72D /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E7E26B9347B000EF72D /* UILabelExtension.swift */; };
 		F8D77E8126B93E6F000EF72D /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E8026B93E6F000EF72D /* SignUpViewModel.swift */; };
 		F8D77E8426B941F2000EF72D /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E8326B941F2000EF72D /* UIButtonExtension.swift */; };
@@ -70,7 +70,7 @@
 		F8D77E7126B929C4000EF72D /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		F8D77E7526B92E7F000EF72D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F8D77E7626B92E7F000EF72D /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
-		F8D77E7C26B93266000EF72D /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
+		F8D77E7C26B93266000EF72D /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		F8D77E7E26B9347B000EF72D /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		F8D77E8026B93E6F000EF72D /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		F8D77E8326B941F2000EF72D /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 		F8D77E7926B931D4000EF72D /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				F8D77E7C26B93266000EF72D /* PreferenceManager.swift */,
+				F8D77E7C26B93266000EF72D /* UserDefaultsManager.swift */,
 				F8D77E8826B9454C000EF72D /* GlobalDataBase.swift */,
 				F8D77E9526BA2FF0000EF72D /* UI.swift */,
 			);
@@ -413,7 +413,7 @@
 				F8D77E9D26BA3382000EF72D /* LeaveButtonCell.swift in Sources */,
 				F82BF28A26B8D92F0055CA6D /* ToDo.swift in Sources */,
 				F82BF28C26B8DD720055CA6D /* ToDoDatabase.swift in Sources */,
-				F8D77E7D26B93266000EF72D /* PreferenceManager.swift in Sources */,
+				F8D77E7D26B93266000EF72D /* UserDefaultsManager.swift in Sources */,
 				F8D77E8C26BA29F3000EF72D /* ProfileViewModel.swift in Sources */,
 				F82BF28526B8D7B50055CA6D /* ToDoCell.swift in Sources */,
 				F8D77E8726B943C0000EF72D /* User.swift in Sources */,

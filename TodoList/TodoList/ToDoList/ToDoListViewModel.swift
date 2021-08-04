@@ -11,19 +11,18 @@ import RxCocoa
 import RxSwift
 
 struct ToDoListViewModel {
-    let sections: Observable<[SectionOfToDoList]>
     let toDoDB: ToDoDatabase
+    let sections: Observable<[SectionOfToDoList]>
     
     init(toDoDB: ToDoDatabase) {
         self.toDoDB = toDoDB
-        
-        self.sections = toDoDB.toDoListidsObservable().map({ ids in
+        sections = toDoDB.toDoListidsObservable().map({ ids -> [SectionOfToDoList] in
             var sections: [SectionOfToDoList] = []
             if ids.isEmpty {
                 sections.append(SectionOfToDoList(id: "To Do Empty", items: [.empty]))
             } else {
                 sections.append(SectionOfToDoList(id: "To Do List \(ids.count)",
-                                                  items: ids.map({ .toDo(id: $0) }) ))
+                                                  items: ids.reversed().map({ .toDo(id: $0) }) ))
             }
             sections.append(SectionOfToDoList(id: "Generate Button", items: [.generateButton]))
             return sections
@@ -40,7 +39,9 @@ struct ToDoListViewModel {
     }
     
     func toggleToDoIsDone(id: String) {
-        toDoDB.toggleToDoIsDone(id: id)
+        guard var toDo = toDoDB.toDo(id: id) else { return }
+        toDo.isDone.toggle()
+        toDoDB.update(id: id, toDo: toDo)
     }
     
     func syncDB() {
