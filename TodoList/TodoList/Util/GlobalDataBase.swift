@@ -60,10 +60,9 @@ extension GlobalDataBase: UserDatabase {
     }
     
     func deleteUser(userId: String) {
-        guard let user = realm.object(ofType: UserRealm.self, forPrimaryKey: userId) else { return }
         do {
             try realm.write {
-                realm.delete(user)
+                realm.deleteAll()
                 self.user.accept(nil)
             }
         } catch {

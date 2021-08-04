@@ -61,4 +61,23 @@ struct ToDoDatabase {
     func toDo(id: String) -> ToDo? {
         return toDoList.value[id]
     }
+    
+    func deleteToDo(id: String) {
+        guard let toDo = realm.object(ofType: ToDoRealm.self, forPrimaryKey: id) else { return }
+        do {
+            try realm.write {
+                realm.delete(toDo)
+                if var toDoData = toDoData.value {
+                    toDoData.ids.removeAll(where: { $0 == id })
+                    self.toDoData.accept(toDoData)
+                    realm.add(toDoData.convertToToDoDataRealm(), update: .modified)
+                }
+                var toDoList = toDoList.value
+                toDoList[id] = nil
+                self.toDoList.accept(toDoList)
+            }
+        } catch {
+            print(" ToDoDataBase Realm Delete Error")
+        }
+    }
 }

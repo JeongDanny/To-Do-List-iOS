@@ -56,6 +56,7 @@ class ToDoListViewController: UIViewController {
             
             return cell
         }
+
         self.dataSource = dataSource
         
         disposeBag.insert(
@@ -136,5 +137,20 @@ extension ToDoListViewController: UITableViewDelegate {
         } catch {
             return 0
         }
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+            do {
+                if let cellData = try dataSource?.model(at: indexPath) as? ToDoListCellData,
+                   case let .toDo(id) = cellData {
+                    return [.init(style: .destructive, title: "🪣", handler: { [weak self] _, _ in
+                        self?.viewModel.deleteToDo(id: id)
+                    })]
+                } else {
+                    return []
+                }
+            } catch {
+                return []
+            }
     }
 }

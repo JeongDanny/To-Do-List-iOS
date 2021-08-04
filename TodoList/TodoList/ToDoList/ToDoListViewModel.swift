@@ -46,6 +46,10 @@ struct ToDoListViewModel {
     func syncDB() {
         toDoDB.sync()
     }
+    
+    func deleteToDo(id: String) {
+        toDoDB.deleteToDo(id: id)
+    }
 }
 
 struct SectionOfToDoList {
