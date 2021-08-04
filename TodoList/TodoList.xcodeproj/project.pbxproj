@@ -31,6 +31,15 @@
 		F8D77E8426B941F2000EF72D /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E8326B941F2000EF72D /* UIButtonExtension.swift */; };
 		F8D77E8726B943C0000EF72D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E8626B943C0000EF72D /* User.swift */; };
 		F8D77E8926B9454C000EF72D /* GlobalDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E8826B9454C000EF72D /* GlobalDataBase.swift */; };
+		F8D77E8C26BA29F3000EF72D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E8B26BA29F3000EF72D /* ProfileViewModel.swift */; };
+		F8D77E9026BA2A6E000EF72D /* UserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E8E26BA2A6E000EF72D /* UserInfoCell.swift */; };
+		F8D77E9126BA2A6E000EF72D /* UserInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8D77E8F26BA2A6E000EF72D /* UserInfoCell.xib */; };
+		F8D77E9426BA2B69000EF72D /* ProfileCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E9326BA2B69000EF72D /* ProfileCellData.swift */; };
+		F8D77E9626BA2FF0000EF72D /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E9526BA2FF0000EF72D /* UI.swift */; };
+		F8D77E9926BA30A4000EF72D /* UserIdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E9726BA30A3000EF72D /* UserIdCell.swift */; };
+		F8D77E9A26BA30A4000EF72D /* UserIdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8D77E9826BA30A4000EF72D /* UserIdCell.xib */; };
+		F8D77E9D26BA3382000EF72D /* LeaveButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D77E9B26BA3382000EF72D /* LeaveButtonCell.swift */; };
+		F8D77E9E26BA3382000EF72D /* LeaveButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8D77E9C26BA3382000EF72D /* LeaveButtonCell.xib */; };
 		F8F3A55C26B915FB0092D913 /* GenerateToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F3A55A26B915FB0092D913 /* GenerateToDoCell.swift */; };
 		F8F3A55D26B915FB0092D913 /* GenerateToDoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8F3A55B26B915FB0092D913 /* GenerateToDoCell.xib */; };
 		F8F3A56026B917D70092D913 /* ToDoEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F3A55E26B917D70092D913 /* ToDoEmptyCell.swift */; };
@@ -67,6 +76,15 @@
 		F8D77E8326B941F2000EF72D /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		F8D77E8626B943C0000EF72D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F8D77E8826B9454C000EF72D /* GlobalDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalDataBase.swift; sourceTree = "<group>"; };
+		F8D77E8B26BA29F3000EF72D /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		F8D77E8E26BA2A6E000EF72D /* UserInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCell.swift; sourceTree = "<group>"; };
+		F8D77E8F26BA2A6E000EF72D /* UserInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoCell.xib; sourceTree = "<group>"; };
+		F8D77E9326BA2B69000EF72D /* ProfileCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellData.swift; sourceTree = "<group>"; };
+		F8D77E9526BA2FF0000EF72D /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
+		F8D77E9726BA30A3000EF72D /* UserIdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdCell.swift; sourceTree = "<group>"; };
+		F8D77E9826BA30A4000EF72D /* UserIdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserIdCell.xib; sourceTree = "<group>"; };
+		F8D77E9B26BA3382000EF72D /* LeaveButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveButtonCell.swift; sourceTree = "<group>"; };
+		F8D77E9C26BA3382000EF72D /* LeaveButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeaveButtonCell.xib; sourceTree = "<group>"; };
 		F8F3A55A26B915FB0092D913 /* GenerateToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateToDoCell.swift; sourceTree = "<group>"; };
 		F8F3A55B26B915FB0092D913 /* GenerateToDoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenerateToDoCell.xib; sourceTree = "<group>"; };
 		F8F3A55E26B917D70092D913 /* ToDoEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoEmptyCell.swift; sourceTree = "<group>"; };
@@ -186,6 +204,9 @@
 		F8D77E6F26B929B6000EF72D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				F8D77E8D26BA2A30000EF72D /* Cells */,
+				F8D77E9226BA2B5B000EF72D /* Models */,
+				F8D77E8B26BA29F3000EF72D /* ProfileViewModel.swift */,
 				F8D77E7026B929C4000EF72D /* ProfileViewController.swift */,
 				F8D77E7126B929C4000EF72D /* ProfileViewController.xib */,
 			);
@@ -208,6 +229,7 @@
 			children = (
 				F8D77E7C26B93266000EF72D /* PreferenceManager.swift */,
 				F8D77E8826B9454C000EF72D /* GlobalDataBase.swift */,
+				F8D77E9526BA2FF0000EF72D /* UI.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -225,6 +247,27 @@
 			isa = PBXGroup;
 			children = (
 				F8D77E8626B943C0000EF72D /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F8D77E8D26BA2A30000EF72D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F8D77E8E26BA2A6E000EF72D /* UserInfoCell.swift */,
+				F8D77E8F26BA2A6E000EF72D /* UserInfoCell.xib */,
+				F8D77E9726BA30A3000EF72D /* UserIdCell.swift */,
+				F8D77E9826BA30A4000EF72D /* UserIdCell.xib */,
+				F8D77E9B26BA3382000EF72D /* LeaveButtonCell.swift */,
+				F8D77E9C26BA3382000EF72D /* LeaveButtonCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F8D77E9226BA2B5B000EF72D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F8D77E9326BA2B69000EF72D /* ProfileCellData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,10 +336,13 @@
 				F8D77E7326B929C4000EF72D /* ProfileViewController.xib in Resources */,
 				F8F3A56126B917D70092D913 /* ToDoEmptyCell.xib in Resources */,
 				F8D77E7826B92E7F000EF72D /* SignUpViewController.xib in Resources */,
+				F8D77E9E26BA3382000EF72D /* LeaveButtonCell.xib in Resources */,
 				F887ACAA26B7EFE800E6CFEB /* ToDoListViewController.xib in Resources */,
 				F887AC9826B7EF7C00E6CFEB /* Assets.xcassets in Resources */,
 				F8F3A55D26B915FB0092D913 /* GenerateToDoCell.xib in Resources */,
+				F8D77E9126BA2A6E000EF72D /* UserInfoCell.xib in Resources */,
 				F887ACA526B7EFDA00E6CFEB /* MainViewController.xib in Resources */,
+				F8D77E9A26BA30A4000EF72D /* UserIdCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,15 +400,21 @@
 				F887ACAB26B7EFE800E6CFEB /* ToDoListViewController.swift in Sources */,
 				F82BF28F26B910940055CA6D /* ToDoData.swift in Sources */,
 				F8D77E8926B9454C000EF72D /* GlobalDataBase.swift in Sources */,
+				F8D77E9426BA2B69000EF72D /* ProfileCellData.swift in Sources */,
 				F887ACA626B7EFDA00E6CFEB /* MainViewController.swift in Sources */,
+				F8D77E9926BA30A4000EF72D /* UserIdCell.swift in Sources */,
+				F8D77E9626BA2FF0000EF72D /* UI.swift in Sources */,
 				F8F3A56326B918BF0092D913 /* ToDoListCellData.swift in Sources */,
 				F887AC8F26B7EF7C00E6CFEB /* AppDelegate.swift in Sources */,
+				F8D77E9026BA2A6E000EF72D /* UserInfoCell.swift in Sources */,
 				F8D77E8426B941F2000EF72D /* UIButtonExtension.swift in Sources */,
 				F8F3A55C26B915FB0092D913 /* GenerateToDoCell.swift in Sources */,
 				F8D77E7226B929C4000EF72D /* ProfileViewController.swift in Sources */,
+				F8D77E9D26BA3382000EF72D /* LeaveButtonCell.swift in Sources */,
 				F82BF28A26B8D92F0055CA6D /* ToDo.swift in Sources */,
 				F82BF28C26B8DD720055CA6D /* ToDoDatabase.swift in Sources */,
 				F8D77E7D26B93266000EF72D /* PreferenceManager.swift in Sources */,
+				F8D77E8C26BA29F3000EF72D /* ProfileViewModel.swift in Sources */,
 				F82BF28526B8D7B50055CA6D /* ToDoCell.swift in Sources */,
 				F8D77E8726B943C0000EF72D /* User.swift in Sources */,
 				F82BF28826B8D7CB0055CA6D /* ToDoListViewModel.swift in Sources */,

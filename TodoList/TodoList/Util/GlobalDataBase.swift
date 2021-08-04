@@ -12,14 +12,16 @@ import RealmSwift
 
 protocol UserDatabase {
     func update(user: User, completion: (() -> Void))
-    func observeUser() -> Observable<User>
+    func getUser() -> User?
+    func observeUser() -> Observable<User?>
+    func deleteUser(userId: String)
 }
 
 let gDB = GlobalDataBase.shared
 
 struct GlobalDataBase {
     static let shared = GlobalDataBase()
-    private let user = PublishRelay<User>()
+    private let user = BehaviorRelay<User?>(value: nil)
     private let realm = try! Realm()
     
     private init() {    }
@@ -29,6 +31,8 @@ struct GlobalDataBase {
         if let userId = udm.userId,
            let user = realm.object(ofType: UserRealm.self, forPrimaryKey: userId) {
             self.user.accept(user.convertToUser())
+        } else {
+            self.user.accept(nil)
         }
     }
 }
@@ -43,11 +47,27 @@ extension GlobalDataBase: UserDatabase {
                 completion()
             }
         } catch {
-            print(" GlobalDataBase Realm Write Error")
+            print(" UserDataBase Realm Write Error")
         }
     }
     
-    func observeUser() -> Observable<User> {
+    func observeUser() -> Observable<User?> {
         user.asObservable()
+    }
+    
+    func getUser() -> User? {
+        user.value
+    }
+    
+    func deleteUser(userId: String) {
+        guard let user = realm.object(ofType: UserRealm.self, forPrimaryKey: userId) else { return }
+        do {
+            try realm.write {
+                realm.delete(user)
+                self.user.accept(nil)
+            }
+        } catch {
+            print(" UserDataBase Realm Delete Error")
+        }
     }
 }

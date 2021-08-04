@@ -64,8 +64,7 @@ class ToDoListViewController: UIViewController {
                 .bind(to: tableView.rx.items(dataSource: dataSource)),
             gDB.observeUser()
                 .observe(on: MainScheduler.instance)
-                .map({ $0.id })
-                .startWith("")
+                .compactMap({ $0?.id })
                 .distinctUntilChanged()
                 .bind(onNext: { [weak self] _ in
                     self?.viewModel.syncDB()
